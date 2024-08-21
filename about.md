@@ -1,8 +1,8 @@
 ---
-title: Colophon
+title: Vedant Jhawar
 permalink: /about/
 layout: page
-excerpt: Hello peeps, I'm student of computer science from Banyuwangi, living in Jogjakarta. This blog for documentation about my programming journey, running on jekyll, hosting on netlify and using my own simple theme.
+excerpt: Hey! I'm Vedant, a student at UC Berkeley. This website is documentaiton for my ventures in mathematics, programming, and electrical engineering.
 comments: false
 ---
 
