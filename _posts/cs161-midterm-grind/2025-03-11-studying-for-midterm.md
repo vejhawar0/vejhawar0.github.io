@@ -12,22 +12,10 @@ tag:
   - midterm
   - notes
 ---
-Make sure the file name follows the correct format for Jekyll posts, which is `YEAR-MONTH-DAY-title.md`. Your file name seems correct, so the issue might be with the front matter or the content itself.
+Note that this page is designed to be a study guide. As a result, note the items with a * right next to them as they may be important for the midterm, or just in general are things worth knowing.
 
-Ensure that the front matter is correctly formatted and that there are no syntax errors. Additionally, try adding some content to the body of the post to see if it appears:
+# Chapter 1 
+Chapter 1 deals with the idea of fundamental principles regarding security. Note the following down:
 
-```markdown
-## Introduction
-
-This post discusses strategies and tips for studying for the CS161 midterm.
-
-### Study Tips
-
-1. Review lecture notes regularly.
-2. Practice past exam papers.
-3. Join study groups.
-
-Good luck with your midterm preparation!
-```
-
-If the issue persists, check the `_config.yml` file to ensure that the `posts` directory is correctly specified and that there are no exclusions preventing the post from being displayed.
+1. Know your threat model
+2. 
