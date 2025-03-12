@@ -14,18 +14,26 @@ tag:
 ---
 Note that this page is designed to be a study guide. As a result, note the items with a __*__ right next to them as they may be important for the midterm, or just in general are things worth knowing.
 
+# Table of Contents
+1. [Chapter 1] (# Chapter 1)
+
+
 # Chapter 1 
 Chapter 1 deals with the idea of fundamental principles regarding security. Note the following down:
 
-1. Know your threat model
-2. Consider Human Factors
-3. Security is Economics
-4. Detect if you can't prevent
-5. Defense in Depth
-6. Least Privilege
-7. Separation of Responsibility
-8. Ensure Complete Mediation
-9. Shannon's Maxim
+1. Know your threat model*
+2. Consider Human Factors*
+3. Security is Economics*
+4. Detect if you can't prevent*
+5. Defense in Depth*
+6. Least Privilege*
+7. Separation of Responsibility*
+8. Ensure Complete Mediation*
+9. Shannon's Maxim*
+10. User fail-safe defaults*
+11. Design Security in From the Start*
+12. TCB*
+13. TOCTTOU Vulnerabilities*
 
 
 ## Know your threat model
@@ -69,5 +77,15 @@ No way to breach system security by bypassing the TCB
 TCB should be protected from tampering by anyone else. There should be no one for things outside the TCB to modify the TCB code or state.
 ### Verifiable:
 It should be possible to verify how correct the TCB is. Should be simple to make it easy to verify
+
+## TOCTTOU (Time of Check to Time of Use) Vulnerabilities:
+Using time between function calls to take advantage and create a vulnerability. Basically, vulnerability of time instead of space.
+
+# Chapter 2
+As a note for memory vulnerabilities note the following:
+
+atoi converts a character string to an integer value
+printf with no explicit arguments for the location of the format string identifiers, claims that 
+
 
 
