@@ -106,6 +106,48 @@ In addition to $2^32$ bytes of memory in the address space, there are also regis
 - push %ebx: Takes value in ebx, decrements stack pointer and pushes value into that spot.
 
 
+Looking through the whole chapter, the parts that really matter are the following:
+- Arguments are pushed onto the stack in reverse order by value. They are usually pass by value type things. As a result the order of methods are the following:
+- Push arguments for function
+- eip of function
+- ebp of function
+- function local variables
+- 
 
+
+# Chapter 3
+
+Stack smashing is a concept that is already familliar to you
+for format string, this is how the function would look
+
+&buf (address fo format string)
+rip of printf
+sfp of printf
+printf internal pointer points ot the location on the stack 8 bytes above the RIP of printf. This pointer tells teh function where to find the actual arguments.
+
+Dangling pointers are also exploits taht can be used.
+
+ret2ret: Takes advantage of ret instruction location to redirect execution to shellcode dynamically.
+
+# Chapter 4: Ways to mitigate vulnerabilties:
+- ASLR (randomizing address space)
+- non-executable pages (certain pieces of memory can't execute code)
+- pointer auth. Put a hash with the pointer (stored in cpu level code)
+
+
+# Chapter 5: Cryptography
+
+- Confidentiality*: Attacker cannot read messages
+- Integrity*: Attacker cannot change messages
+- authenticity*: Message is from claimed author
+- IND-CPA*: Eve sends M0 and M1 and needs to figure out which of M0 or M1 the message is. If probability of guessing text is around 50% then it IND-CPA secure
+
+
+## Types of Encryption
+- One-time pad: Keygen(), xor message and key for encryption, xor again for original. Only practical if key was securely distributed.
+- Block Ciphers: Encrypts a fixed size of bits. Initially not IND-CPA because its deterministic. ECB mode: Segregates blocks with no relation to each other.
+- CBC mode (cipher block chaining):  plain text xors with iv and goes through encryption. This ciphertext is used as the input to the next block. For decription, decrypt cipher text and xor with the IV. Then send cipher text to input of the decriptin and xor with the previous ciphertext (uses padding)
+- CFB mode: Takes IV and puts it thorugh encryption and xors with plain text.
+- CTR mode: Like CFB except instead of ciphertext being placed into the 
 
 
