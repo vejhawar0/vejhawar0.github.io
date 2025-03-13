@@ -120,6 +120,8 @@ Looking through the whole chapter, the parts that really matter are the followin
 Stack smashing is a concept that is already familliar to you
 for format string, this is how the function would look
 
+memcpy works as follows (dest, src, n)
+
 &buf (address fo format string)
 rip of printf
 sfp of printf
@@ -148,6 +150,7 @@ ret2ret: Takes advantage of ret instruction location to redirect execution to sh
 - Block Ciphers: Encrypts a fixed size of bits. Initially not IND-CPA because its deterministic. ECB mode: Segregates blocks with no relation to each other.
 - CBC mode (cipher block chaining):  plain text xors with iv and goes through encryption. This ciphertext is used as the input to the next block. For decription, decrypt cipher text and xor with the IV. Then send cipher text to input of the decriptin and xor with the previous ciphertext (uses padding)
 - CFB mode: Takes IV and puts it thorugh encryption and xors with plain text.
-- CTR mode: Like CFB except instead of ciphertext being placed into the 
+- CTR mode: Like CFB except instead of ciphertext being placed into the next value, we instead use a counter + nonce in order to change the values around.
+
 
 
