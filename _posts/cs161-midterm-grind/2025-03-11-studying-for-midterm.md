@@ -96,15 +96,13 @@ We use x86
 
 ## Registers
 In addition to $2^32$ bytes of memory in the address space, there are also registers, which store memory directly on the cpu. 
+
 - eip is teh instruction pointer which is the address of where the machine code currently being executed is.
-
 - ebp is the base pointer: address of the top of the current stack frame
-
 - esp: Address of the bottom of the current stack frame.
 
 ### Types of Instructions:
 - pop %eax: Takes the value at the current bottom of the stack (where esp is) and pushes the value into register eax. Increments stack pointer to go up by a word too.
-
 - push %ebx: Takes value in ebx, decrements stack pointer and pushes value into that spot.
 
 
